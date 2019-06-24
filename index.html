@@ -62,8 +62,7 @@
 
   <script>
     document.getElementById("formSubmit").addEventListener("click", function() {
-      var output =
-        {
+      var output = {
           title: document.getElementById("formTitle").value,
           content: document.getElementById("formContent").value,
           landingPage: document.getElementById("formLandingPage").value,
@@ -72,6 +71,8 @@
 
       var code = document.getElementById("jsonOutput");
       code.innerHTML = JSON.stringify(output, null, 2).trim();
+
+      window.scrollTo(0,document.body.scrollHeight)
     });
   </script>
 </body>
