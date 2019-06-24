@@ -34,16 +34,23 @@
 
       <button type="button" class="btn btn-primary" id="formSubmit">Translate to JSON</button>
     </form>
+    
+    <pre>
+      <code id="jsonOutput">
+      </code>
+    </pre>
   </div>
 
   <script>
     document.getElementById("formSubmit").addEventListener("click", function() {
-      var title = document.getElementById("formTitle").value;
-      var content = document.getElementById("formContent").value;
-      var landingPage = document.getElementById("formLandingPage").value;
-      console.log(title)
-      console.log(content)
-      console.log(landingPage)
+      var output = {
+        title: document.getElementById("formTitle").value,
+        content: document.getElementById("formContent").value,
+        landingPage: document.getElementById("formLandingPage").value
+      }
+
+      var code = document.getElementById("jsonOutput");
+      code.innerHTML = JSON.stringify(output);
     });
   </script>
 </body>
