@@ -14,40 +14,46 @@
 <body>
 
   <div class="container">
-    <form>
-      <div class="form-group">
-        <label for="formTitle">Title</label>
-        <input type="text" class="form-control" id="formTitle" placeholder="">
-      </div>
-      
-      <div class="form-group">
-        <label for="formContent">Content</label>
-        <textarea class="form-control" id="formContent" rows="3"></textarea>
-        <small id="formContentHelper" class="form-text text-muted">Some widgets does not display the content, only the title.</small>
-      </div>
-      
-      <div class="form-group">
-        <label for="formLandingPage">Landing Page URL</label>
-        <input type="text" class="form-control" id="formLandingPage" placeholder="e.g. https://strossle.com">
-        <small id="formLandingPageHelper" class="form-text text-muted">URL of the landing page user should be redirected to when clicking a recommendation in our widget.</small>
-      </div>
 
-      <div class="form-group">
-        <label for="formImpressionPixel">Third-Party Impression Pixel</label>
-        <input type="text" class="form-control" id="formImpressionPixel" placeholder="e.g. https://adform.com?id=123">
-        <small id="formImpressionPixelHelper" class="form-text text-muted">A third-party impression pixel allow your customer to track ad impressions through a service provider of their own choise.</small>
-      </div>
+    <div class="row">
+      <form>
+        <div class="form-group">
+          <label for="formTitle">Title</label>
+          <input type="text" class="form-control" id="formTitle" placeholder="">
+        </div>
 
-      <button type="button" class="btn btn-primary" id="formSubmit">Translate to JSON</button>
-    </form>
-    
-    <h5>JSON</h5>
-    <p class="lead">Copy the following code and paste it into the <strong>Customized script</strong> field of your creative.<p>
-    <div class="p-3 mb-2 bg-dark">
-      <pre>
-        <code class="text-white" id="jsonOutput"></code>
-      </pre>
+        <div class="form-group">
+          <label for="formContent">Content</label>
+          <textarea class="form-control" id="formContent" rows="3"></textarea>
+          <small id="formContentHelper" class="form-text text-muted">Some widgets does not display the content, only the title.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="formLandingPage">Landing Page URL</label>
+          <input type="text" class="form-control" id="formLandingPage" placeholder="e.g. https://strossle.com">
+          <small id="formLandingPageHelper" class="form-text text-muted">URL of the landing page user should be redirected to when clicking a recommendation in our widget.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="formImpressionPixel">Third-Party Impression Pixel</label>
+          <input type="text" class="form-control" id="formImpressionPixel" placeholder="e.g. https://adform.com?id=123">
+          <small id="formImpressionPixelHelper" class="form-text text-muted">A third-party impression pixel allow your customer to track ad impressions through a service provider of their own choise.</small>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="formSubmit">Translate to JSON</button>
+      </form>
     </div>
+    
+    <div class="row">
+      <h5>JSON</h5>
+      <p class="lead">Copy the following code and paste it into the <strong>Customized script</strong> field of your creative.<p>
+      <div class="p-3 mb-2 bg-dark">
+        <pre>
+          <code class="text-white" id="jsonOutput"></code>
+        </pre>
+      </div>
+    </div>
+
   </div>
 
   <script>
