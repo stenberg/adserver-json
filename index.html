@@ -15,7 +15,7 @@
 
   <div class="container">
 
-    <div class="row">
+    <section>
       <form>
         <div class="form-group">
           <label for="formTitle">Title</label>
@@ -42,9 +42,9 @@
 
         <button type="button" class="btn btn-primary" id="formSubmit">Translate to JSON</button>
       </form>
-    </div>
+    </section>
     
-    <div class="row">
+    <section>
       <h5>JSON</h5>
       <p class="lead">Copy the following code and paste it into the <strong>Customized script</strong> field of your creative.<p>
       <div class="p-3 mb-2 bg-dark">
@@ -52,21 +52,22 @@
           <code class="text-white" id="jsonOutput"></code>
         </pre>
       </div>
-    </div>
+    </section>
 
   </div>
 
   <script>
     document.getElementById("formSubmit").addEventListener("click", function() {
-      var output = {
-        title: document.getElementById("formTitle").value,
-        content: document.getElementById("formContent").value,
-        landingPage: document.getElementById("formLandingPage").value,
-        impressionPixel: document.getElementById("formImpressionPixel").value
-      }
+      var output =
+        {
+          title: document.getElementById("formTitle").value,
+          content: document.getElementById("formContent").value,
+          landingPage: document.getElementById("formLandingPage").value,
+          impressionPixel: document.getElementById("formImpressionPixel").value
+        };
 
       var code = document.getElementById("jsonOutput");
-      code.innerHTML = JSON.stringify(output, null, 2).trim();
+      code.innerHTML = JSON.stringify(output, null, 2);
     });
   </script>
 </body>
