@@ -17,42 +17,33 @@
     <form>
       <div class="form-group">
         <label for="formTitle">Title</label>
-        <input type="text" class="form-control" id="formTitle" placeholder="Title of your creative">
+        <input type="text" class="form-control" id="formTitle" placeholder="">
       </div>
       
       <div class="form-group">
         <label for="formContent">Content</label>
         <textarea class="form-control" id="formContent" rows="3"></textarea>
-        <small id="formContentHelper" class="form-text text-muted">Some widgets will only display title.</small>
+        <small id="formContentHelper" class="form-text text-muted">Some widgets does not display the content, only the title.</small>
       </div>
       
-      <p>
-        <label for="headline">Headline</label><br>
-        <input type="text" name="headline" id="headline" value="">
-      </p>
+      <div class="form-group">
+        <label for="formLandingPage">Landing Page URL</label>
+        <input type="text" class="form-control" id="formLandingPage" placeholder="e.g. https://strossle.com">
+        <small id="formLandingPageHelper" class="form-text text-muted">URL of the landing page user should be redirected to when clicking a recommendation in our widget.</small>
+      </div>
 
-      <p>
-        <label for="bodyText">Body</label><br>
-        <input type="text" name="bodyText" id="bodyText" value="" style="width: 200px; height: 100px;">
-      </p>
-
-      <p>
-        <label for="landingPage">Landing Page</label><br>
-        <input type="text" name="landingPage" id="landingPage" value="">
-      </p>
-
-      <input type="button" name="submit" id="submit" value="Submit">
+      <button type="button" class="btn btn-primary" id="formSubmit">Translate to JSON</button>
     </form>
   </div>
 
   <script>
-    document.getElementById("submit").addEventListener("click", function() {
+    document.getElementById("formSubmit").addEventListener("click", function() {
       var title = document.getElementById("formTitle").value;
-      var body = document.getElementById("bodyText").value;
-      var url = document.getElementById("landingPage").value;
+      var content = document.getElementById("formContent").value;
+      var landingPage = document.getElementById("formLandingPage").value;
       console.log(title)
-      console.log(body)
-      console.log(url)
+      console.log(content)
+      console.log(landingPage)
     });
   </script>
 </body>
