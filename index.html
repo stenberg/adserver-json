@@ -15,6 +15,17 @@
 
   <div class="container">
     <form>
+      <div class="form-group">
+        <label for="formTitle">Title</label>
+        <input type="text" class="form-control" id="formTitle" placeholder="Title of your creative">
+      </div>
+      
+      <div class="form-group">
+        <label for="formContent">Content</label>
+        <textarea class="form-control" id="formContent" rows="3"></textarea>
+        <small id="formContentHelper" class="form-text text-muted">Some widgets will only display title.</small>
+      </div>
+      
       <p>
         <label for="headline">Headline</label><br>
         <input type="text" name="headline" id="headline" value="">
@@ -36,10 +47,10 @@
 
   <script>
     document.getElementById("submit").addEventListener("click", function() {
-      var headline = document.getElementById("headline").value;
+      var title = document.getElementById("formTitle").value;
       var body = document.getElementById("bodyText").value;
       var url = document.getElementById("landingPage").value;
-      console.log(headline)
+      console.log(title)
       console.log(body)
       console.log(url)
     });
