@@ -71,7 +71,7 @@
         };
 
       var code = document.getElementById("jsonOutput");
-      code.innerHTML = encodeURIComponent(JSON.stringify(output, null, 2));
+      code.innerHTML = JSON.stringify(JSON.stringify(output), null, 2);
     });
   </script>
 </body>
