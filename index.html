@@ -69,14 +69,12 @@
   <script>
     document.getElementById("formSubmit").addEventListener("click", function() {
       
-      var impUrlElements = document.querySelectorAll("input[name='impUrls[]']").map(function(impUrl) {
-        return impUrl.value;
-      });
+      var impUrlElements = document.querySelectorAll("input[name='impUrls[]']");
       
       var impUrls = [];
       
       for (var i = 0; i < impUrlElements.length; i++) {
-        impUrls.push(impUrlElements.value);
+        impUrls.push(impUrlElements[i].value);
       }
       
       var output = {
