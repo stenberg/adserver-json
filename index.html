@@ -30,6 +30,18 @@
           </div>
 
           <div class="form-group mb-5">
+            <label for="formBrandName">Brand Name</label>
+            <input type="text" class="form-control" id="formBrandName" placeholder="e.g. Coca Cola">
+            <small id="formBrandNameHelper" class="form-text text-muted">The brand behind an ad. Not all widgets will display the brand name.</small>
+          </div>
+
+          <div class="form-group mb-5">
+            <label for="formImgOverlayText">Image Overlay Text</label>
+            <input type="text" class="form-control" id="formImgOverlayText" placeholder="">
+            <small id="formImgOverlayHelper" class="form-text text-muted">Text is added as an image overlay and is mostly used in situations where an ad comes with a disclaimer such as credit institutes obliged by law to state interest rates.</small>
+          </div>
+
+          <div class="form-group mb-5">
             <label for="formImpressionPixel">Third-Party Impression Pixel</label>
             <input type="text" class="form-control" name= "impUrls[]" id="formImpressionPixel" placeholder="e.g. https://adform.com?id=123">
             <input type="text" class="form-control" name= "impUrls[]">
@@ -59,8 +71,8 @@
       var output = {
           title: document.getElementById("formTitle").value,
           content: document.getElementById("formContent").value,
-          landingPage: document.getElementById("formLandingPage").value,
-          impressionPixel: document.getElementById("formImpressionPixel").value
+          brandName: document.getElementById("formBrandName").value,
+          imageOverlayText: document.getElementById("formImgOverlayText").value
       };
       
       console.log(document.getElementsByName("impUrls"));
