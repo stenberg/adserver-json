@@ -68,6 +68,11 @@
 
   <script>
     document.getElementById("formSubmit").addEventListener("click", function() {
+      
+      var impUrls = document.querySelectorAll("input[name='impUrls[]']").map(function(impUrl) {
+        return impUrl.value;
+      });
+      
       var output = {
           title: document.getElementById("formTitle").value,
           content: document.getElementById("formContent").value,
@@ -75,7 +80,7 @@
           imageOverlayText: document.getElementById("formImgOverlayText").value
       };
       
-      console.log(document.querySelectorAll("input[name='impUrls[]']"));
+      console.log(impUrls);
 
       var code = document.getElementById("jsonOutput");
       code.innerHTML = JSON.stringify(output, null, 2).trim();
