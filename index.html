@@ -74,7 +74,9 @@
       var impUrls = [];
       
       for (var i = 0; i < impUrlElements.length; i++) {
-        impUrls.push(impUrlElements[i].value);
+        if (impUrlElements[i].value) {
+          impUrls.push(impUrlElements[i].value);
+        }
       }
       
       var output = {
