@@ -91,11 +91,16 @@
       var code = document.getElementById("jsonOutput");
       code.innerHTML = JSON.stringify(output, null, 2).trim();
 
-      window.scrollTo(0,document.body.scrollHeight)
+      window.scrollTo(0,document.body.scrollHeight);
     });
     
     document.getElementById("pixelLink").addEventListener("click", event => {
-      console.log("CLICK")
+      var input = document.createElement("input");
+      input.setAttribute("type", "text");
+      input.setAttribute("class", "form-control");
+      input.setAttribute("name", "impUrls[]");
+      
+      console.log(input)
     });
   </script>
 </body>
