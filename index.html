@@ -75,7 +75,7 @@
           imageOverlayText: document.getElementById("formImgOverlayText").value
       };
       
-      console.log(document.getElementsByName("impUrls"));
+      console.log(document.guerySelectorAll("input[name='impUrls[]']"));
 
       var code = document.getElementById("jsonOutput");
       code.innerHTML = JSON.stringify(output, null, 2).trim();
