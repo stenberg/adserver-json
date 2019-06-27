@@ -100,7 +100,9 @@
       input.setAttribute("class", "form-control");
       input.setAttribute("name", "impUrls[]");
       
-      console.log(input)
+      var impUrls = document.getElementsByName("impUrls[]");
+      var lastImpUrl = impUrls[impUrls.length - 1];
+      lastImpUrl.parentElement.insertBefore(input, lastImpUrl.nextSibling);
     });
   </script>
 </body>
