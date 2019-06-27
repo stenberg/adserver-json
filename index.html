@@ -81,10 +81,9 @@
           title: document.getElementById("formTitle").value,
           content: document.getElementById("formContent").value,
           brandName: document.getElementById("formBrandName").value,
-          imageOverlayText: document.getElementById("formImgOverlayText").value
+          imageOverlayText: document.getElementById("formImgOverlayText").value,
+          impressionUrls: impUrls
       };
-      
-      console.log(impUrls);
 
       var code = document.getElementById("jsonOutput");
       code.innerHTML = JSON.stringify(output, null, 2).trim();
