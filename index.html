@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <style>
+    #pixels .form-control {
+      margin-bottom: 5px;
+    }
+  </style>
+
   <script src="https://kit.fontawesome.com/0c10da7eca.js"></script>
 </head>
 
@@ -42,11 +48,9 @@
             <small id="formImgOverlayHelper" class="form-text text-muted">Text is added as an image overlay and is mostly used in situations where an ad comes with a disclaimer such as credit institutes obliged by law to state interest rates.</small>
           </div>
 
-          <div class="form-group mb-5">
+          <div class="form-group mb-5" id="pixels">
             <label for="formImpressionPixel">Third-Party Impression Pixels</label>
-            <input type="text" class="form-control" name= "impUrls[]" id="formImpressionPixel" placeholder="e.g. https://adform.com?id=123">
-            <input type="text" class="form-control" name= "impUrls[]">
-            <input type="text" class="form-control" name= "impUrls[]">
+            <input type="text" class="form-control" name= "impUrls[]" id="formImpressionPixel" placeholder="e.g. https://track.adform.net/adfserve/?bn=123">
             <small id="formImpressionPixelHelper" class="form-text text-muted">A third-party impression pixel allow your customer to track ad impressions through a service provider of their own choice.</small>
             <button type="button" class="btn btn-link btn-sm" id="pixelLink"><i class="fas fa-plus"></i> Add one more pixel</button>
           </div>
@@ -59,7 +63,7 @@
     <div class="row mt-5">
       <div class="col">
         <h4>JSON</h4>
-        <p class="lead">Copy the following code and paste it into the <strong>Customized script</strong> field of your creative:<p>
+        <p class="lead">Copy the following code and paste it into the <strong>Customized script for the creative</strong> field of your creative:<p>
         <div class="p-3 mb-2 bg-dark">
           <pre><code class="text-white" id="jsonOutput"></code></pre>
         </div>
