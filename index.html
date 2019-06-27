@@ -69,9 +69,15 @@
   <script>
     document.getElementById("formSubmit").addEventListener("click", function() {
       
-      var impUrls = document.querySelectorAll("input[name='impUrls[]']").map(function(impUrl) {
+      var impUrlElements = document.querySelectorAll("input[name='impUrls[]']").map(function(impUrl) {
         return impUrl.value;
       });
+      
+      var impUrls = [];
+      
+      for (var i = 0; i < impUrlElements.length; i++) {
+        impUrls.push(impUrlElements.value);
+      }
       
       var output = {
           title: document.getElementById("formTitle").value,
